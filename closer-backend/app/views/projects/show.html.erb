@@ -2,20 +2,18 @@
 
 <div class="container">
 	<div class="row">
-    <% (Project.all).each do |project| %>
         <div class="col-lg-6">
-            <h1>Project Title: <%= project.title%></h1>
+            <h1>Project Title: <%= @project.title%></h1>
             <br>
-            <p><strong>Description:</strong> <%= project.description %></p>
-            <p><strong>Category:</strong> <%= project.category %></p>
-            <p><strong>Timeframe:</strong> <%= project.timeframe %></p>
+            <p><strong>Description:</strong> <%= @project.description %></p>
+            <p><strong>Category:</strong> <%= @project.category %></p>
+            <p><strong>Timeframe:</strong> <%= @project.timeframe %></p>
         </div>
         <div class="col-lg-6 text-right">
            <a href="" class="btn btn-primary">Trello</a>
            <a href="" class="btn btn-primary">Slack</a>
            <a href="" class="btn btn-primary">Schedule a meeting</a>
         </div>
-    <% end %>    
     </div>
 	<hr>
     <div class="row">
