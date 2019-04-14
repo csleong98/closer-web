@@ -1,18 +1,80 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-12 text-center">
-            <h1>The Closer Web Project</h1>
-        </div>
+<style type="text/css">
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-image: linear-gradient(to right, #0072FF, #005C97);
+}
+
+.right {
+  right: 0;
+  background-image: linear-gradient(to right, #F80759, #F11712);
+}
+
+.centered {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+h1, h2 * {
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+    text-align: center;
+}
+
+h2 *:hover {
+    color: white;
+    font-size: 42px;
+    text-decoration: none;
+    text-shadow: 2px 2px 5px black;
+}
+
+#head{
+    font-size: 64px;
+    z-index: 99;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    text-shadow: 1px 1px 2px black;
+
+}
+</style>
+
+
+<div>
+    <div class="split left" style="background-color: white; color: white;">
+      <div class="centered">
+        <h2><%= link_to "Learner", learner_dashboard_path %></h2>
+        <!-- <h2>Organisations</h2> -->
+      </div>
     </div>
-
-    <div class="row">
-        <div class="col-lg-6">
-            <%= link_to "I'm a learner", learner_dashboard_path, class: "btn btn-block btn-primary btn-lg" %>
-        </div>
-
-        <div class="col-lg-6">
-            <%= link_to "I'm an employer", projects_path, class: "btn btn-block btn-primary btn-lg" %>
-        </div>
+    <div class="split right" style="background-color: white; color: white;">
+      <div class="centered">
+        <h2><%= link_to "Organisations", projects_path %></h2>
+        
+      </div>
     </div>
 </div>
 
+<div style="display: inline-block;">
+    <img src="">
+    <h1 class="col-12" id="head">CLOSER</h1>
+</div>
