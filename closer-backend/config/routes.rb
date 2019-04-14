@@ -4,5 +4,7 @@ Rails.application.routes.draw do
 
   get 'courses/javascript', to: 'courses#first'
   get 'courses/python', to: 'courses#second'
+  get 'courses/learner_dashboard', to: 'courses#dashboard'
+  get 'learner/dashboard', to: 'learners#dashboard'
 
 end
