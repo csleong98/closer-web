@@ -1,3 +1,15 @@
-Long live the great supreme leader, Chairman Xi.
+# Closer Web Project
 
-![alt text](https://webapi.project-syndicate.org/library/c57db9a7dca9d4f4ea9f010654c4b763.2-1-super.1.jpg)
+
+### Installing
+
+1. Git clone the repository
+2. Locate the folder name "closer-backend"
+3. cd into the folder
+4. Install Ruby 2.4.1
+5. type in "bundle install"
+6. type in "rake db:migrate"
+7. type in "rake assets:precompile"
+
+### Running
+1. type in "rails s"
