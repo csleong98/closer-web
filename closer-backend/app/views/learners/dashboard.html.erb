@@ -2,7 +2,12 @@
 
 <div class="container">
 	<div class="row">
+        <div class="col-lg-6">
+            <h2>Courses</h2>
+        </div>
+    </div>
 
+    <div class="row">
         <div class="col-lg-4">
             <div class="card">
                 <img class="card-img-top" src="https://www.itsnicethat.com/system/files/122018/5c1781db7fa44c5a800003ac/index_default/INT-ROTY-GraphicDesign-List.png?1545203083" height="200px" alt="Card image cap">
@@ -53,5 +58,60 @@
             </div>
         </div>
     </div>
+    <hr>
+	<div class="row">
+        <div class="col-lg-6">
+            <h2>Projects</h2>
+        </div>
+    </div>
 
+    <div class="row">
+        <% (Project.all).each do |project| %>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Title : <%= project.title%></h5>
+                        <p class="card-text"><strong>Description:</strong> <%= project.description %></p>
+                        <p class="card-text"><strong>Category:</strong> <%= project.category %></p>
+                        <p class="card-text"><strong>Timeframe:</strong> <%= project.timeframe %></p>
+                    </div>
+
+                    <div class="card-body">
+                        <p class="card-test">Progress</p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width: 40%">40%</div>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <%= link_to "View Project", project_path(project), class: "card-link btn btn-primary"%>
+                    </div>
+                </div>
+            </div>
+        <% end %>    
+    </div>
+    <hr>
+	<div class="row">
+        <div class="col-lg-6">
+            <h2>Meetup</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card">
+                <%= image_tag("sketch-meetup.jpg", class:"card-img-top", style: "height=200px;") %>
+                <div class="card-body">
+                    <h5 class="card-title">Sketch Meetup</h5>
+                    <p class="card-text">Join the rest of the designers here to discuss and share about the state of digital design.</p>
+                    <p class="card-text">21 - 4 - 2019 (Sunday)</p>
+                    <p class="card-text">8:00 p.m. - 10:00 p.m.</p>
+                </div>
+                <div class="card-body">
+                    <a href="#" class="card-link btn btn-primary">Attend Meetup</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<br>
