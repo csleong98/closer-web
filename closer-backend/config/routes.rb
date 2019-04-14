@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   get 'courses/python', to: 'courses#second'
   get 'courses/learner_dashboard', to: 'courses#dashboard'
   get 'learner/dashboard', to: 'learners#dashboard'
-
+  get 'closer/login', to: 'closers#login'
 end
